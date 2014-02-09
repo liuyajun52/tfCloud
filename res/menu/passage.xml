@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/collecMenu"
+        android:icon="@android:drawable/btn_star"
+        android:title="添加/取消收藏"
+        android:showAsAction="ifRoom" >
+    </item>
+
+</menu>

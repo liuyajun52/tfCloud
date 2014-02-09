@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">天府软件云</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_news">最新消息</string>
+    <string name="title_activity_passage">天府软件云</string>
+    <string name="title_activity_mgazine_list">《成都软件》</string>
+    <string name="title_activity_magazine">目录</string>
+    <string name="title_activity_product_server">产业服务</string>
+    <string name="title_activity_setting">设置</string>
+    <string name="title_activity_user_info">用户信息</string>
+    <string name="title_activity_collection">收藏夹</string>
+    <string name="title_activity_comm">行业协会</string>
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section3">Section 3</string>
+    <string name="title_activity_association_directory">协会名录</string>
+    <string name="title_activity_about">关于天府软件云</string>
+    <string name="title_activity_regist">注册</string>
+    <string name="title_activity_search">搜索</string>
+
+</resources>

@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.blacklighting.tianfuyunv2"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="17" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.Holo.Light" >
+        <activity
+            android:name="com.blacklighting.tianfuyunv2.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.blacklighting.tianfuyunv2.GuideActivity" >
+        </activity>
+        <activity
+            android:name="com.blacklighting.tianfuyunv2.NewsActivity"
+            android:label="@string/title_activity_news"
+            android:parentActivityName="com.blacklighting.tianfuyunv2.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.blacklighting.tianfuyunv2.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.blacklighting.tianfuyunv2.PassageActivity"
+            android:label="@string/title_activity_passage" >
+        </activity>
+        <activity
+            android:name="com.blacklighting.tianfuyunv2.MagazineListActivity"
+            android:label="@string/title_activity_mgazine_list"
+            android:parentActivityName="com.blacklighting.tianfuyunv2.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.blacklighting.tianfuyunv2.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.blacklighting.tianfuyunv2.MagazineActivity"
+            android:label="@string/title_activity_magazine"
+            android:parentActivityName="com.blacklighting.tianfuyunv2.MagazineListActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.blacklighting.tianfuyunv2.MagazineListActivity" />
+        </activity>
+        <activity
+            android:name="com.blacklighting.tianfuyunv2.LoginActivity"
+            android:label="@string/title_activity_login"
+            android:parentActivityName="com.blacklighting.tianfuyunv2.MainActivity"
+            android:windowSoftInputMode="adjustResize|stateVisible" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.blacklighting.tianfuyunv2.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.blacklighting.tianfuyunv2.ProductServerActivity"
+            android:label="@string/title_activity_product_server"
+            android:parentActivityName="com.blacklighting.tianfuyunv2.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.blacklighting.tianfuyunv2.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.blacklighting.tianfuyunv2.SettingActivity"
+            android:label="@string/title_activity_setting"
+            android:parentActivityName="com.blacklighting.tianfuyunv2.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.blacklighting.tianfuyunv2.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.blacklighting.tianfuyunv2.UserInfoActivity"
+            android:label="@string/title_activity_user_info"
+            android:parentActivityName="com.blacklighting.tianfuyunv2.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.blacklighting.tianfuyunv2.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.blacklighting.tianfuyunv2.CollectionActivity"
+            android:label="@string/title_activity_collection"
+            android:parentActivityName="com.blacklighting.tianfuyunv2.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.blacklighting.tianfuyunv2.MainActivity" />
+        </activity>
+
+        <receiver android:name="com.blacklighting.tianfuyunv2.push.BootReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="com.blacklighting.tianfuyunv2.CommActivity"
+            android:label="@string/title_activity_comm"
+            android:parentActivityName="com.blacklighting.tianfuyunv2.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.blacklighting.tianfuyunv2.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.blacklighting.tianfuyunv2.AssociationDirectoryActivity"
+            android:label="@string/title_activity_association_directory"
+            android:parentActivityName="com.blacklighting.tianfuyunv2.ProductServerActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.blacklighting.tianfuyunv2.ProductServerActivity" />
+        </activity>
+        <activity
+            android:name="com.blacklighting.tianfuyunv2.AboutActivity"
+            android:label="@string/title_activity_about"
+            android:parentActivityName="com.blacklighting.tianfuyunv2.SettingActivity" android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.blacklighting.tianfuyunv2.SettingActivity" />
+        </activity>
+        <activity
+            android:name="com.blacklighting.tianfuyunv2.RegistActivity"
+            android:label="@string/title_activity_regist"
+            android:parentActivityName="com.blacklighting.tianfuyunv2.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.blacklighting.tianfuyunv2.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.blacklighting.tianfuyunv2.SearchActivity"
+            android:label="@string/title_activity_search"
+            android:parentActivityName="com.blacklighting.tianfuyunv2.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.blacklighting.tianfuyunv2.MainActivity" />
+        </activity>
+        <service android:name=".push.PushServer"></service>
+    </application>
+
+</manifest>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <PreferenceCategory android:title="功能设置" >
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="loagImagWithoutWifi"
+            android:summaryOff="关闭"
+            android:summaryOn="开启"
+            android:title="2G/3G网络图片加载" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="push"
+            android:summaryOff="关闭"
+            android:summaryOn="开启"
+            android:title="推送" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="软件信息" >
+        <EditTextPreference android:title="意见反馈" android:key="suggestion" android:negativeButtonText="确定" android:positiveButtonText="取消"/><Preference
+            android:key="update"
+            android:summary="当前版本1.0beta"
+            android:title="检查应用更新" />
+        <Preference
+            android:key="about"
+            android:title="关于天府软件云" />
+        
+    </PreferenceCategory>
+
+</PreferenceScreen>
