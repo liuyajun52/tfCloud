@@ -19,7 +19,10 @@ public class CommActivity extends FragmentActivity implements
 		ActionBar.TabListener {
 
 	String[] titles = { "协会介绍", "协会章程", "加入协会", "联系方式" };
-	static String[] urls = { "http://www.baidu.com", "", "", "" };
+	static String[] urls = { "http://218.200.234.130:7782/introduce.html",
+			"http://218.200.234.130:7782/rule.html",
+			"http://218.200.234.130:7782/join.html",
+			"http://218.200.234.130:7782/contact.html" };
 
 	/**
 	 * The {@link android.support.v4.view.PagerAdapter} that will provide
@@ -78,7 +81,6 @@ public class CommActivity extends FragmentActivity implements
 					.setTabListener(this));
 		}
 	}
-
 
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
@@ -169,7 +171,7 @@ public class CommActivity extends FragmentActivity implements
 			View rootView = inflater.inflate(R.layout.fragment_comm_dummy,
 					container, false);
 			WebView web = (WebView) rootView.findViewById(R.id.webView1);
-			web.setWebViewClient(new WebViewClient(){
+			web.setWebViewClient(new WebViewClient() {
 
 				@Override
 				public boolean shouldOverrideUrlLoading(WebView view, String url) {
@@ -177,12 +179,11 @@ public class CommActivity extends FragmentActivity implements
 					view.loadUrl(url);
 					return true;
 				}
-				
+
 			});
 			web.loadUrl(urls[getArguments().getInt(ARG_SECTION_NUMBER)]);
 			return rootView;
 		}
 	}
 
-	
 }
