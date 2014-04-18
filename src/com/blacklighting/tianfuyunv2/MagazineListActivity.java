@@ -65,7 +65,7 @@ public class MagazineListActivity extends Activity {
 			@Override
 			public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
 					long arg3) {
-				Intent i = new Intent(getApplicationContext(),
+				Intent i = new Intent(MagazineListActivity.this,
 						MagazineActivity.class);
 				i.putExtra("period", magazineList.get(arg2).getPeriod());
 				i.putExtra("magazineT", magazineList.get(arg2).getName());

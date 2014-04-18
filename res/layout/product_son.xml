@@ -14,10 +14,19 @@
 
     <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginLeft="7dp"
         android:clickable="false"
         android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/productServerPassageTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:clickable="false"
+            android:textColor="#c4c4c4"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
 
         <TextView
             android:id="@+id/productServerPassageTitle"
@@ -27,16 +36,6 @@
             android:clickable="false"
             android:maxLines="2"
             android:textAppearance="?android:attr/textAppearanceMedium" />
-
-        <TextView
-            android:id="@+id/productServerPassageTime"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="3dp"
-            android:clickable="false"
-            android:text="时间"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:visibility="gone" />
 
     </LinearLayout>
 

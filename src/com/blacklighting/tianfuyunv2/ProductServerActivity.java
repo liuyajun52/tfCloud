@@ -41,7 +41,7 @@ import com.blacklighting.tianfuyunv2.models.PassageListIteam;
 
 public class ProductServerActivity extends Activity {
 	public static final int ERRORWHAT = 4;
-	String[] categoryArray = { "政策法规", "软件企业", "商务信息", "协会名录" };
+	String[] categoryArray = { "政策法规", "软件企业", "商务信息", "产品推荐","协会名录" ,};
 	String[] leavel = { "理事长单位", "副理事长单位", "常务理事单位", "理事单位", "普通会员单位" };
 	List<List<PassageListIteam>> categoryList;
 	MHandler mHandler = new MHandler(this);
@@ -394,7 +394,7 @@ public class ProductServerActivity extends Activity {
 
 		@Override
 		public int getGroupCount() {
-			return categories.size() + 1;
+			return categories.size();
 		}
 
 		@Override

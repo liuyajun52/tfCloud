@@ -2,6 +2,8 @@ package com.blacklighting.tianfuyunv2;
 
 import android.app.ActionBar;
 import android.app.FragmentTransaction;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
@@ -174,11 +176,30 @@ public class CommActivity extends FragmentActivity implements
 			web.setWebViewClient(new WebViewClient() {
 
 				@Override
-				public boolean shouldOverrideUrlLoading(WebView view, String url) {
+				public boolean shouldOverrideUrlLoading(WebView view, String url) {{
 					// TODO Auto-generated method stub
-					view.loadUrl(url);
-					return true;
-				}
+					for(String temp:urls){
+						if(temp.equals(url)){
+							view.loadUrl(temp);
+							return true;
+						}
+					}
+					
+					if (url.contains("mailto")) { 
+						Intent i = new Intent(Intent.ACTION_SEND); 
+//						i.setType("text/plain"); //模拟器请使用这行
+						i.setType("message/rfc822") ; // 真机上使用这行
+						i.putExtra(Intent.EXTRA_EMAIL, new String[]{url.substring(url.indexOf(':')+1)}); 
+						startActivity(Intent.createChooser(i, "选择邮件客户端"));
+						return true;
+					}else{
+						Intent intent = new Intent();
+						intent.setAction(Intent.ACTION_VIEW);
+						intent.setData(Uri.parse(url));
+						startActivity(Intent.createChooser(intent, "选择浏览器"));
+						return true;
+					}
+				}}
 
 			});
 			web.loadUrl(urls[getArguments().getInt(ARG_SECTION_NUMBER)]);

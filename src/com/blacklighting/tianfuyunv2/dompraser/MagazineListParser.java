@@ -58,7 +58,7 @@ public class MagazineListParser {
 					}
 				}
 			}
-			if (magazine.getImage() != null&&SettingActivity.loadImage) {
+			if (magazine.getImage() != null && SettingActivity.loadImage) {
 				Bitmap bitmap = null;
 				ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
 				InputStream inputStream = null;
@@ -75,13 +75,15 @@ public class MagazineListParser {
 						outputStream.write(data, 0, len);// 写入
 					}
 					byte[] result = outputStream.toByteArray();// 声明字节数组
-					bitmap = BitmapFactory.decodeByteArray(result, 0,
-							result.length);
-					inputStream.close();
-					magazine.setRealImag(bitmap);
+					if (result != null && result.length != 0) {
+						bitmap = BitmapFactory.decodeByteArray(result, 0,
+								result.length);
+						inputStream.close();
+						magazine.setRealImag(bitmap);
+					}
 				}
-//				inputStream.close();
-//				magazine.setRealImag(bitmap);
+				// inputStream.close();
+				// magazine.setRealImag(bitmap);
 			}
 			magazineList.add(magazine);
 		}

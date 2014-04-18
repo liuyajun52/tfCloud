@@ -398,13 +398,17 @@ public class MagazineActivity extends Activity implements View.OnClickListener {
 				Intent bwIntent = new Intent(this, PassageActivity.class);
 				bwIntent.putExtra("id", bw.getId());
 				startActivity(bwIntent);
+			}else{
+				Toast.makeText(getApplicationContext(), "该期杂志没有编委栏目", Toast.LENGTH_SHORT).show();
 			}
 			break;
 		case R.id.smButton:
 			if (sm != null) {
 				Intent smIntent = new Intent(this, PassageActivity.class);
-				smIntent.putExtra("id", bw.getId());
+				smIntent.putExtra("id", sm.getId());
 				startActivity(smIntent);
+			}else{
+				Toast.makeText(getApplicationContext(), "该期杂志没有声明栏目", Toast.LENGTH_SHORT).show();
 			}
 			break;
 		}
